@@ -159,6 +159,14 @@ final class DigestTests: XCTestCase {
         let data: Data = Data(bytes: UnsafePointer<UInt8>([49, 50, 51] as Array<UInt8>), count: 3)
         XCTAssert(data.checksum() == 0x96, "Invalid checksum")
     }
+    
+    func testRSA() {
+        let public_key = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBIc5hNbqQcnXkfbrpP0wrcS2OlzejCe2jKKFqIPGZX455Zi+92Z+DBbuBWjKdq1DSkDkY9CGYf8cWdnR4KU0TuEM2cIzw8lyw5VdR2hhQepyptfuSTtTloOL/nccct5tAkYepEhLfli7p5H4tM/b/Q+ssQwgau7Trz1ZL86z3XwIDAQAB";
+        
+        let private_key = "MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAMEhzmE1upBydeR9uuk/TCtxLY6XN6MJ7aMooWog8ZlfjnlmL73Zn4MFu4FaMp2rUNKQORj0IZh/xxZ2dHgpTRO4QzZwjPDyXLDlV1HaGFB6nKm1+5JO1OWg4v+dxxy3m0CRh6kSEt+WLunkfi0z9v9D6yxDCBq7tOvPVkvzrPdfAgMBAAECgYEAr+eFnJ6eNTA7Voh5tDYVvz+POd9bKmFBkyjPk+U7h/EzyDidZTKQiXqwJImtrlO6An6fsq2w58AB6eCsBkG/047eBpR6aSdWpPi/FHDwkQogU81m7qJlYBdfuqgyL1yd08bgeFtN9agQstlFlyrSUAa0uYy9JtnUwrBs/ma/pVECQQDwvUbWGKrLlmr/WnJlKdGRVybu3zIRCm71ZUwzK6/y6rS9ZBoqojeXNAFjUuvr1k21synZ6I25KwH9xBOKannHAkEAzV/1BaxO5JzeOpz+IT2oW+q7KcZWzxo1+aDrgmXEERaz38B0/PN7BQ5FtlFOpv4tp6OpCzwxYGDZwI4Eo3DVqQJBAIMepGlR0BzI1Yg1TB87crBVppfuKwfLBfpUbPdl8RQ+r6iD0Biud9a79ZGShXrTI0o2xjGwjxhui0wbMoVuTtsCQC79fJ9+rFJsfgBlOVQ7ulDFpWtKgURDmAP0yM3+IN1UF3XjoCDcSNKAUH0Fn3xf/ew0axIyBI4rusbu96q5v3kCQHRCmxzvjs7yNRi087y6lupmfDcyecYEMuLNjKueDZI0finDsUwtiKZHWaQg2loTmeVPqOQ872t7Z8Q7+O/PUtM=";
+        
+        
+    }
 }
 
 #if !CI
